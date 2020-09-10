@@ -1,0 +1,102 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://unpkg.com/css.gg/icons/all.css');
+
+html {
+  widows: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  font-family: 'Roboto Slab', serif;
+  position: relative;
+
+  box-sizing: border-box;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  transform: translateX(0);
+  transition: transform 300ms ease;
+}
+.slides.slide-1{
+  transform: translateX(-100%);
+}
+.slides.slide-2{
+  transform: translateX(-200%);
+}
+.slides.slide-3{
+  transform: translateX(-300%);
+}
+
+.slide {
+  flex: 1 0 100%;
+  background-color: #222;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.slide pre {
+  font-size: 20px;
+  padding: 15px;
+  background-color: black;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
+}
+
+.content #content--interim {
+  color: gray;
+}
+.content .highlight {
+  color: #ffa500;
+}
+
+.button {
+  position: fixed;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+}
+.button.mic {
+  bottom: 20px;
+}
+.button.speak {
+  display: none;
+  bottom: 100px;
+}
+.button.speak.visible {
+  display: block;
+}
+#mic-icon {
+  width: 100%;
+  height: 100%;
+}

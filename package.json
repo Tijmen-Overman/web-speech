@@ -1,0 +1,11 @@
+{
+  "name": "web-speech",
+  "version": "0.0.1",
+  "description": "A simple project to test the web-speech api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tijmen Overman",
+  "license": "ISC"
+}

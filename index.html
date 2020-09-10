@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <section class="slides">
+    <div class="slide active">
+      Web speech API
+    </div>
+    <div class="slide">
+      SpeechRecognition
+      <pre>
+        <code>
+          // Initialize
+          const recognition = new webkitSpeechRecognition()
+
+          // Options
+          recognition.grammers = SpeechGrammarList
+          recognition.continuous = boolean;
+          recognition.interimResults = boolean;
+          recognition.lang = string;
+          recognition.maxAlternatives = number;
+          recognition.serviceURI = string;
+        </code>
+      </pre>
+    </div>
+    <div class="slide">
+      Event
+      <pre><code>
+        event {
+          results: [
+            {
+              [
+                {
+                  confidence: 0.9454858899116516
+                  transcript: "something I said"
+                }
+              ]
+              isFinal: true
+            }
+          ]
+        }
+      </code></pre>
+    </div>
+    <div class="slide">
+      <div class="content">
+        <span id="content--final"></span>
+        <span id="content--interim"></span>
+      </div>
+    </div>
+  </section>
+
+  <button class="button mic">
+    <img id="mic-icon" src="mic-on.svg"/>
+  </button>
+  <button class="button speak">
+    <img id="speak-icon" src="speak.svg"/>
+  </button>
+
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
